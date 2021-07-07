@@ -2,6 +2,10 @@ package com.ufkunl.workshop.util;
 
 import lombok.Data;
 
+/**
+ * @developer -- ufukunal
+ */
+
 @Data
 public class GenericServiceResult {
 

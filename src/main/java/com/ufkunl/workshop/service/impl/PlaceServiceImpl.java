@@ -20,6 +20,10 @@ import org.springframework.web.client.RestTemplate;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @developer -- ufukunal
+ */
+
 @Service
 public class PlaceServiceImpl implements PlaceService {
 
@@ -31,6 +35,13 @@ public class PlaceServiceImpl implements PlaceService {
     @Value("${google.api.key}")
     public String apiKey;
 
+    /**
+     * Setter injections
+     *
+     * @param placeMapper
+     * @param searchPlaceRepository
+     * @param placeRepository
+     */
     @Autowired
     public PlaceServiceImpl(PlaceMapper placeMapper,
                             PlaceRepository placeRepository,
@@ -40,6 +51,11 @@ public class PlaceServiceImpl implements PlaceService {
         this.searchPlaceRepository = searchPlaceRepository;
     }
 
+    /**
+     * get places
+     * @param
+     * @return
+     */
     @Override
     public GenericServiceResult getPlaces(String longitude, String latitude, String radius) throws ParseException {
         SearchPlace searchPlace = getPlacesFromDB(latitude,longitude,radius);

@@ -6,6 +6,10 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
+/**
+ * @developer -- ufukunal
+ */
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Data

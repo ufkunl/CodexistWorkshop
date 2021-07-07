@@ -7,6 +7,10 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
+/**
+ * @developer -- ufukunal
+ */
+
 @Slf4j
 @ControllerAdvice
 public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
@@ -18,7 +22,6 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
      * @param request
      * @return
      */
-
     @ExceptionHandler(value = {PlaceNotFound.class})
     protected GenericServiceResult handleRuntimeProductException(Exception ex, WebRequest request) {
         String message = ex.getMessage();
