@@ -7,5 +7,5 @@ public class PlaceDTO extends BaseDTO {
     private String name;
     private String lat;
     private String lng;
-    private Boolean isOpen;
+    private Boolean nowOpen;
 }

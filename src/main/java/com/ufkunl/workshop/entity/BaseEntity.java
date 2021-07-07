@@ -3,6 +3,8 @@ package com.ufkunl.workshop.entity;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 
@@ -11,11 +13,12 @@ import javax.persistence.MappedSuperclass;
  */
 
 @Data
-@EqualsAndHashCode(of = "placeId")
+@EqualsAndHashCode(of = "id")
 @MappedSuperclass
 public class BaseEntity {
 
     @Id
-    private String placeId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
 }

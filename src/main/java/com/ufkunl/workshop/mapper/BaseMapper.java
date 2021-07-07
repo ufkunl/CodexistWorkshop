@@ -14,7 +14,6 @@ import java.util.List;
 public interface BaseMapper<Entity extends BaseEntity, DTO extends BaseDTO> {
 
     @Named("toEntity")
-    @Mapping(target = "creationDate", ignore = true)
     Entity toEntity(DTO dto);
 
     @Named("toDTO")
