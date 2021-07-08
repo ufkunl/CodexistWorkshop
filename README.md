@@ -1,4 +1,4 @@
-# Codexist Workshop
+# Workshop BE
 This project has been created for an workshop whose name is Codexist. User can get place by latitude,longitude and radius. 
 If data exist in DB,  gets from DB but if data not exist, gets from google place api.
 
