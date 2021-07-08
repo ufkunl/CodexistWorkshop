@@ -25,7 +25,7 @@ public class PlaceController {
 
     @GetMapping("/nearby-search")
     public GenericServiceResult getCategoryList(@RequestParam String longitude, @RequestParam String latitude, @RequestParam String radius) throws ParseException {
-        return placeService.getPlaces(longitude,latitude,radius);
+        return placeService.getPlaces(latitude,longitude,radius);
     }
 
 }

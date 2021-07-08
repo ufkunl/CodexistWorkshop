@@ -57,7 +57,7 @@ public class PlaceServiceImpl implements PlaceService {
      * @return
      */
     @Override
-    public GenericServiceResult getPlaces(String longitude, String latitude, String radius) throws ParseException {
+    public GenericServiceResult getPlaces(String latitude, String longitude, String radius) throws ParseException {
         SearchPlace searchPlace = getPlacesFromDB(latitude,longitude,radius);
         if(searchPlace == null){
             searchPlace = getPlacesFromGoogleApi(latitude,longitude,radius);
